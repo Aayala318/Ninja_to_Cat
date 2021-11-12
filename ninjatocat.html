@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ninja to Cat</title>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <h1>Ninja to Cat</h1>
+    <div>
+        <img src="C:\Users\adama\Desktop\codingDojo\WebFundamentals\jQuery\img\ninja0.png" alt="C:\Users\adama\Desktop\codingDojo\WebFundamentals\jQuery\img\cat0.png">
+    </div>
+    <div>
+        <img src="C:\Users\adama\Desktop\codingDojo\WebFundamentals\jQuery\img\ninja1.png" alt="C:\Users\adama\Desktop\codingDojo\WebFundamentals\jQuery\img\cat1.png" >
+    </div>
+    <div>
+        <img src="C:\Users\adama\Desktop\codingDojo\WebFundamentals\jQuery\img\ninja2.png" alt="C:\Users\adama\Desktop\codingDojo\WebFundamentals\jQuery\img\cat2.png">
+    </div>
+    <div>
+        <img src="C:\Users\adama\Desktop\codingDojo\WebFundamentals\jQuery\img\ninja3.png" alt="C:\Users\adama\Desktop\codingDojo\WebFundamentals\jQuery\img\cat3.png">
+    </div>
+    <div>
+        <img src="C:\Users\adama\Desktop\codingDojo\WebFundamentals\jQuery\img\ninja4.png" alt="C:\Users\adama\Desktop\codingDojo\WebFundamentals\jQuery\img\cat4.png">
+    </div>
+</body>
+<style type="text/css">
+    body{
+        text-align: center;
+    }
+</style>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $('img').click(function() {
+            console.log('alt value is', $(this).attr('alt'));
+        });
+        $('img').click(function(){
+            var pic = $(this).attr('alt');
+            $(this).attr('alt', $(this).attr('src'));
+            $(this).attr('src', pic);
+        });
+    });
+</script>
+</html>
